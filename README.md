@@ -1,4 +1,4 @@
-# set-hadoop-linux
+# set-hadoop-linux-Google Compute engine
 
 # 0. New Linux user
 ```
