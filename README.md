@@ -249,7 +249,36 @@ hadoop@dockers-container:~$ jps
 2176 SecondaryNameNode
 2045 DataNode
 ```
+# 5.Verifying Hadoop Installation
 
+The following steps are used to verify the Hadoop installation.
+
+Step 1: Name Node Setup
+Set up the namenode using the command “hdfs namenode -format” as follows.
+```
+$ cd ~ 
+$ hdfs namenode -format 
+```
+
+Step 2: Verifying Hadoop dfs
+The following command is used to start dfs. Executing this command will start your Hadoop file system.
+
+$ start-dfs.sh 
+
+Step 3: Verifying Yarn Script
+The following command is used to start the yarn script. Executing this command will start your yarn daemons.
+
+$ start-yarn.sh 
+
+Step 4: Accessing Hadoop on Browser
+The default port number to access Hadoop is 50070. Use the following url to get Hadoop services on browser.
+
+http://localhost:50070/
+
+Step 5: Verify All Applications for Cluster
+The default port number to access all applications of cluster is 8088. Use the following url to visit this service.
+
+http://localhost:8088/
 
 
 
