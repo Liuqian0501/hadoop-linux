@@ -212,6 +212,19 @@ cat output/*
     </property>
 </configuration>
 
+
+```
+
+#### 3.5 edit /usr/local/hadoop/etc/hadoop/mapred-site.xml
+```
+<configuration>
+<property>
+
+<name>mapreduce.framework.name</name>
+<value>yarn</value>
+
+</property>
+</configuration>
 ```
 
 #### 3.5 由于现在属于单主机伪分布式运行方式，所以还需要修改一下从节点的配置文件
