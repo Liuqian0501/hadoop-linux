@@ -281,4 +281,39 @@ The default port number to access all applications of cluster is 8088. Use the f
 http://localhost:8088/
 
 
+# Run wordcount
+Uploading Files to HFDS
+```
+$hadoop fs -put /home/hadoop/Workspace/wordcount/input /
+$hadoop fs -ls /
+Found 1 items
+drwxr-xr-x   - hadoop supergroup          0 2017-07-28 03:31 /input
+$hadoop fs -ls /input
+Found 3 items
+-rw-r--r--   1 hadoop supergroup      84854 2017-07-28 03:31 /input/LICENSE.txt
+-rw-r--r--   1 hadoop supergroup      14978 2017-07-28 03:31 /input/NOTICE.txt
+-rw-r--r--   1 hadoop supergroup       1366 2017-07-28 03:31 /input/README.txt
+```
+
+# Run hadoop
+
+**Compile!the!three!Java!classes:!**
+```
+javac -classpath `hadoop classpath` stubs/*.java
+```
+**Collect!your!compiled!Java!files!into!a!JAR!file:!**
+```
+$ jar cvf wc.jar stubs/*.class
+```
+**run hadoop**
+```
+hadoop jar wc.jar stubs.WordCount /input /output
+```
+**show result**
+```
+hadoop fs -cat /output/* | less
+```
+
+
+
 
