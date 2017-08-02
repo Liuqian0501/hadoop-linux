@@ -328,5 +328,8 @@ hadoop fs -cat /output/* | less
 ```
 
 
+# Run hadoop streaming API python
+
+
 
 
