@@ -329,7 +329,15 @@ hadoop fs -cat /output/* | less
 
 
 # Run hadoop streaming API python
-
+```
+$ hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-*.jar -D mapred.reduce.tasks=4 \
+-files /home/hadoop/Workspace/wordcount/set-hadoop-linux/ForPython/wordMapper.py,/home/hadoop/Workspace/wordcount/set-hadoop-linux/ForPython/wordReducer.py \
+-input /input \
+-output /output7 \
+-mapper "python /home/hadoop/Workspace/wordcount/set-hadoop-linux/ForPython/wordMapper.py" \
+-combiner "python /home/hadoop/Workspace/wordcount/set-hadoop-linux/ForPython/wordReducer.py" \
+-reducer "python /home/hadoop/Workspace/wordcount/set-hadoop-linux/ForPython/wordReducer.py"
+```
 
 
 
