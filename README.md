@@ -341,10 +341,11 @@ $ hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-*.jar -D mapre
 
 
 # Run hadoop with ToolRunner
+```
 $javac -classpath `hadoop classpath` wordCount/*.java
 $jar cvf wordCount.jar wordCount/*.class
 $hadoop jar wordcount.jar wordCount.WordCountwithTool -D reducer.minWordCount=5 /input /output
-
+```
 
 
 
